@@ -2,9 +2,25 @@
   "name": "@transitive-cont-tasks/app-one",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "start:db": "while true; do echo 'db ping'; sleep 1; done"
+  },
   "dependencies": {
     "next": "~15.2.4",
     "react": "19.0.0",
     "react-dom": "19.0.0"
+  },
+  "nx": {
+    "targets": {
+      "start:db": {
+        "continuous": true
+      },
+      "start": {
+        "dependsOn": [
+          "start:db",
+          "build"
+        ]
+      }
+    }
   }
 }
