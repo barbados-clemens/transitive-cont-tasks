@@ -1,0 +1,10 @@
+{
+  "name": "@transitive-cont-tasks/app-one-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@transitive-cont-tasks/app-one"
+    ]
+  }
+}
